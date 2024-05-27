@@ -108,6 +108,19 @@
         transform: translateX(-150%);
     }
 
+    .car::after {
+        content: '';
+        height: calc(v-bind('roadParams.car.height') * 0.85);
+        width: v-bind('roadParams.car.light.length');
+        background-color: var(--color-dark);
+        clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%);
+        position: absolute;
+        right: calc(v-bind('roadParams.car.length') / 4.5);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
     .light {
         position: absolute;
         width: v-bind('roadParams.car.light.length');

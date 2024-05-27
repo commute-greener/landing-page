@@ -13,6 +13,7 @@
             :textColor="'var(--color-white)'"
         >
             <RoadAnimation />
+            <PhoneElementComponent />
         </SectionComponent>
         <SectionComponent
             :title="'What is it?'"
