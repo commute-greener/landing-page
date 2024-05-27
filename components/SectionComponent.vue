@@ -17,7 +17,7 @@
             <div v-if="props.body" class="section-body">{{ props.body }}</div>
         </div>
 
-        <slot></slot>
+        <slot class="slot-space"></slot>
     </div>
 
 </template>
@@ -34,6 +34,10 @@
         padding-top: 24px;
         background-color: v-bind('props.color');
         overflow: hidden;
+    }
+
+    .slot-space {
+        z-index: 10;
     }
 
     .title-container {

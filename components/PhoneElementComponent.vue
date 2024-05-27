@@ -68,6 +68,7 @@
         align-self: center;
         height: 40svh;
         width: 70%;
+        max-width: 250px;
         object-fit: cover; 
         object-position: 100% 0;
     }
