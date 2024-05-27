@@ -35,6 +35,7 @@
             :color="'var(--color-light-green)'"
             :textColor="'var(--color-dark)'"
         >
+            <Icon name="fa-solid:car-side" size="42"/>
             <div class="city-wrapper">
                 <TinyCityComponent />
             </div>
@@ -46,6 +47,13 @@
 
     .wrapper {
         width: 100%;
+    }
+
+    .city-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .wrapper::after {

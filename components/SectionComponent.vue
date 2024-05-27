@@ -30,14 +30,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         gap: 5svh;
         padding-top: 24px;
         background-color: v-bind('props.color');
         overflow: hidden;
-    }
-
-    .slot-space {
-        z-index: 10;
+        color: v-bind('props.textColor');
     }
 
     .title-container {
@@ -46,7 +44,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: v-bind('props.textColor');
     }
 
     .section-title {

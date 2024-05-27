@@ -1,91 +1,107 @@
 <script setup>
 
+    let windowWidth = ref(undefined)
+
+    onMounted(() => {
+        windowWidth.value = `${window.innerWidth}px`;
+
+        window.onresize(() => {
+            windowWidth.value = `${window.innerWidth}px`;
+        })
+    })
+
+    onBeforeUnmount(() => {
+        window.onresize = null;
+    })
+
 </script>
 
 <template>
-    <div class="city-container">
-        <div class='highscraper'>
-            <div class='wall-one'>
-            <div></div>
+        <div class="city-container">
+            <div class='highscraper'>
+                <div class='wall-one'>
+                    <div></div>
+                </div>
+                <div class='wall-two'>
+                    <div></div>
+                </div>
+                <div class='roof'>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div></div>
+                </div>
             </div>
-            <div class='wall-two'>
-            <div></div>
+
+            <div class='brickhouse'>
+                <div class='wall-one'>
+                    <div></div>
+                </div>
+                <div class='wall-two'>
+                    <div></div>
+                </div>
+                <div class='roof'>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
-            <div class='roof'>
-            <div>
+
+            <div class='leaves'>
+                <div></div>
+            </div>
+            <div class='wood'></div>
+
+            <div class='ground-cropped'>
+                <div class='shadow-brickhouse'></div>
+                <div class='shadow-highscraper'></div>
+
+                <div class='car-one red'></div>
+                <div class='car-one blue'></div>
+                <div class='car-two black'></div>
+
+            </div>
+
+            <div class='water'></div>
+            <div class='fontain'>
+                <div></div>
+            </div>
+            <div class='water-drops'>
+                <div></div>
+                <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <div>
+
+            <div class='road'></div>
+            <div class='ground'>
                 <div></div>
                 <div></div>
-            </div>
-            <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-        
-        <div class='brickhouse'>
-            <div class='wall-one'>
-            <div></div>
-            </div>
-            <div class='wall-two'>
-            <div></div>
-            </div>
-            <div class='roof'>
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-            <div>
-                <div></div>
-                <div></div>
-            </div>
-            </div>
-        </div>
-        
-        <div class='leaves'>
-            <div></div>
-        </div>
-        <div class='wood'></div>
-        
-        <div class='ground-cropped'>
-            <div class='shadow-brickhouse'></div>
-            <div class='shadow-highscraper'></div>
-            
-            <div class='car-one red'></div>
-            <div class='car-one blue'></div>
-            <div class='car-two black'></div>
-            
-        </div>
-        
-        <div class='water'></div>
-        <div class='fontain'>
-            <div></div>
-        </div>
-        <div class='water-drops'>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        
-        <div class='road'></div>
-        <div class='ground'>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
 </template>
 
 <style scoped>
 
     .city-container {
         position: relative;
-        width: 100%;
-        height: auto;
-        margin-bottom: 200px;
+        width: v-bind('windowWidth');
+        height: 300px;
+        align-self: center;
+        transform: translate(25%, 5%);
+        margin-top: 10dvh;
     }
 
     .ground {
@@ -633,7 +649,7 @@
         background-color: #6389a8;
         width: 30px;
         height: 40px;
-        z-index: 2;
+        z-index: 3;
         transform: rotateZ(-45deg);
         top: 75px;
         left: 173px;
@@ -707,7 +723,7 @@
         }
 
         50% {
-            height: 15px;
+            height: 25px;
         }
 
         100% {

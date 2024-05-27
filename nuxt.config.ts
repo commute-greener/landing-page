@@ -3,6 +3,6 @@ import { fileURLToPath } from 'node:url';
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  css: ['~/assets/css/main.css'],
-  
+  css: ['~/assets/css/main.css',],
+  modules: ['nuxt-swiper', 'nuxt-icon'],
 })

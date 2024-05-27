@@ -140,8 +140,8 @@
     }
 
     @keyframes cross {
-        50% {transform: translateX(calc(100vw + 2 * v-bind('roadParams.car.length')));}
-        100% {transform: translateX(calc(100vw + 2 * v-bind('roadParams.car.length')));}
+        50% {transform: translateX(calc(130vw + 2 * v-bind('roadParams.car.length')));}
+        100% {transform: translateX(calc(130vw + 2 * v-bind('roadParams.car.length')));}
     }
 
 </style>
