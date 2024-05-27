@@ -1,0 +1,16 @@
+:root {
+
+    /*breakpoints*/
+    --breakpoint-small: 576;
+    --breakpoint-medium: 768;
+    --breakpoint-large: 992;
+
+    /*colors*/
+    --color-dark: #242424;
+    --color-white: #f1f1f1;
+    --color-green: #c3e2c2;
+    --color-light-green: #eaeccc;
+    --color-orange: #dbcc95;
+    --color-red: #cd8d7a;
+
+}
