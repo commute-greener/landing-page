@@ -62,6 +62,18 @@
                 <TinyCityComponent />
             </div>
         </SectionComponent>
+        <SectionComponent
+            :title="'Get in touch!'"
+            :body="'We are also launching a newsletter! If you want to know all about environmental news, it is one click away!'"
+            :color="'var(--color-dark)'"
+            :textColor="'var(--color-white)'"
+        >
+            <img class="img" src="/traffic-jam.png" alt="Cars stuck in traffic">
+            <RegisterForm />
+        </SectionComponent>
+        <footer>
+            <FooterComp />
+        </footer>
     </div>
 </template> 
 
@@ -69,6 +81,11 @@
 
     .wrapper {
         width: 100%;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
     }
 
     .card-preview {

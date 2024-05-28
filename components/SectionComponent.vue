@@ -31,7 +31,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 5svh;
+        gap: 3svh;
         padding-top: 24px;
         background-color: v-bind('props.color');
         overflow: hidden;
@@ -49,6 +49,7 @@
     .section-title {
         font-weight: bold;
         margin-top: 5svh;
+        text-align: center;
     }
 
     .section-body {
