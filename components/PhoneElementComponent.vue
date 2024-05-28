@@ -35,19 +35,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: end;
     }
 
     .explanations {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 3px;
     }
 
     .explanation-item {
-        font-size: 18px;
         display: flex;
         flex-direction: row;
+        width: 100%;
         padding-left: 24px;
         gap: 20px;
         align-items: center;
