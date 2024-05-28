@@ -17,10 +17,9 @@
           <span class="bar"></span>
         </div>
         <ul :class="{mobileNav: mobileNav}" class="nav nav-items">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Work</a></li>
-          <li class="nav-item"><a href="#">Careers</a></li>
+          <li class="nav-item" @click="mobileNav = !mobileNav"><a href="#section2">What is Commute?</a></li>
+          <li class="nav-item" @click="mobileNav = !mobileNav"><a href="#section3">Get in touch!</a></li>
+          <li class="nav-item" @click="mobileNav = !mobileNav"><a href="#section4">Our socials</a></li>
         </ul>
       </nav>
   </div>

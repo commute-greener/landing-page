@@ -98,6 +98,7 @@
   .footer span {
     font-size: 12px;
     color: var(--color-dark);
+    text-align: center;
   }
    
   @keyframes wave-animation {

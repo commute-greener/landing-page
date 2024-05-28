@@ -28,6 +28,7 @@
     <div ref="wrapper" class="wrapper">
         <NavBar />
         <SectionComponent 
+            id="section1"
             :title="'COMMUTE'"
             :body="'Day-to-Day Ride-sharing made easy.'"
             :color="'var(--color-dark)'"
@@ -37,32 +38,36 @@
             <PhoneElementComponent />
         </SectionComponent>
         <SectionComponent
+            id="section2"
             :title="'What is it?'"
             :color="'var(--color-light-green)'"
             :textColor="'var(--color-dark)'"
         >
-            <swiper
-                class="swiper-cards"
-                :space-between="50"
-                :slides-per-view="1"
-                :loop="true"
-                :autoplay="{
-                    delay: 3000,
-                    disableOnInteraction: true
-                }"
-            >   
-                <swiper-slide v-for="card in cards">
-                    <Card :iconName="card.iconName" :text="card.text"/>
-                </swiper-slide>
-                <div class="swiper-pagination">
-                    <span class="pagination-bullet" v-for="(card, index) in cards" @click="console.log(card)"></span>
-                </div>
-            </swiper>
             <div class="city-wrapper">
-                <TinyCityComponent />
+                <swiper
+                    class="swiper-cards"
+                    :space-between="50"
+                    :slides-per-view="1"
+                    :loop="true"
+                    :autoplay="{
+                        delay: 3000,
+                        disableOnInteraction: true
+                    }"
+                >   
+                    <swiper-slide v-for="card in cards">
+                        <Card :iconName="card.iconName" :text="card.text"/>
+                    </swiper-slide>
+                    <div class="swiper-pagination">
+                        <span class="pagination-bullet" v-for="(card, index) in cards" @click="console.log(card)"></span>
+                    </div>
+                </swiper>
+                <div class="city-wrapper">
+                    <TinyCityComponent />
+                </div>
             </div>
         </SectionComponent>
         <SectionComponent
+            id="section3"
             :title="'Get in touch!'"
             :body="'We are also launching a newsletter! If you want to know all about environmental news, it is one click away!'"
             :color="'var(--color-dark)'"
@@ -71,7 +76,7 @@
             <img class="img" src="/traffic-jam.png" alt="Cars stuck in traffic">
             <RegisterForm />
         </SectionComponent>
-        <footer>
+        <footer id="section4">
             <FooterComp />
         </footer>
     </div>
@@ -81,6 +86,16 @@
 
     .wrapper {
         width: 100%;
+    }
+
+    .city-wrapper {
+        margin-top: 5svh;
+        height: 110vh;
+        gap: 5svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .img {

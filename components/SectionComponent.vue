@@ -25,7 +25,7 @@
 <style scoped>
 
     .section-container {
-        height: 100dvh;
+        height: fit-content;
         width: 100%;
         display: flex;
         flex-direction: column;
