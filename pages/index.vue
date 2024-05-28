@@ -84,6 +84,7 @@
     }
 
     .img {
+        padding-left: 15px;
         width: 100%;
         height: auto;
     }
